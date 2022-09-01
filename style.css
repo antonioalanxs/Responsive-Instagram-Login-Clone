@@ -1,0 +1,337 @@
+/** 
+ * We have tried:
+ * 1.- to composize everything as much as possible (minus all the typography).
+ * 2.- to minimize CSS seeing patterns and common properties (minus components because they have to be 
+ *     independent of everything) by creating "helper classes" (as if we were dealing with a framework).
+ *     Examples given on typography or on some positioning such as "text-align: center;".
+ * 3.- to have a bottom-up approach, starting to layout the components independently and then positioning
+ *     them according to the design we want to replicate.
+ *
+ * In short, we have tried to increase the flexibility, growth and reusability of the code, and we have
+ * also avoided repetition of it.
+ */
+
+/**********************
+ * global adjustments *
+ **********************/
+:root {
+  --fs-large: 0.875rem;
+  --fs-medium: 0.8125rem;
+  --fs-small: 0.75rem;
+
+  --fw-medium: 600;
+
+  --ff-apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+
+  --clr-primary: #fafafa;
+  --clr-accent: #dbdbdb;
+  --clr-white: #fff;
+  --clr-gray: #8e8e8e;
+  --clr-dark: #262626;
+  --clr-blue: #00376b;
+  --clr-disabled-blue: #b2dffc;
+  --clr-light-blue: #0095f6;
+  --clr-facebook: #385185;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+/****************** 
+ * helper classes *
+ ******************/
+.text-center {
+  text-align: center;
+}
+
+.text-gap {
+  padding: 0.1em 0.7em;
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-blue {
+  color: var(--clr-blue);
+}
+
+.text-light-blue {
+  color: var(--clr-light-blue);
+}
+
+.text-soft {
+  color: var(--clr-gray);
+}
+
+/**************
+ * components *
+ **************/
+/* logo */
+.logo {
+  cursor: pointer;
+}
+
+ /* card */
+.card {
+  border: 1px solid var(--clr-accent);
+  background-color: var(--clr-white);
+}
+
+.card--large {
+  padding: 1% 12% 4% 12%;
+}
+
+.card--medium {
+  padding: 5% 0;
+}
+
+/* phone */
+/** 
+ * One image will be superimposed on top of another (phone below screen, screen on top of phone). This 
+ * method will save future problems related to positioning. 
+ */
+.phone {
+  /* We give the size that the image occupies to the container so that it can display it. */
+  width: 421px;
+  height: 583px;
+
+  background-image: url("img/phone.png"); /* It will make our task easier. */
+  background-repeat: no-repeat;
+}
+
+.phone__screen {
+  /* We do not use "margin" because it will affect the parent container, thus separating it from others. */
+  position: relative;
+  top: 28px;
+  left: 155px;
+}
+
+/* form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.form__input {
+  padding: 0.8em 0.7em;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.form__input--soft {
+  border: 1px solid var(--clr-accent);
+  background-color: var(--clr-primary);
+}
+
+.form__submit {
+  padding: 0.6em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 0;
+}
+
+.form__submit--separated {
+  margin-top: 0.75em;
+}
+
+.form__submit--disabled {
+  color: var(--clr-white);
+
+  border-color: transparent;
+  background-color: var(--clr-disabled-blue);
+}
+
+/* bar */
+.bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 1.4em;
+}
+
+.bar__line {
+  align-self: center;
+  height: 1px;
+}
+
+.bar__line--soft {
+  background-color: var(--clr-accent);
+}
+
+.bar__text {
+  text-transform: uppercase;
+}
+
+/* facebook */
+.facebook {
+  display: flex;
+  gap: 0.4em;
+}
+
+.facebook__icon {
+  position: relative;
+  top: 0.2em;
+
+  width: 1.143em;
+  height: 1.143em;
+}
+
+.facebook__text {
+  color: var(--clr-facebook);
+}
+
+/* banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4em;
+}
+
+.banner__text {
+  text-align: center;
+}
+
+.banner__img {
+  height: 2.5em;
+}
+
+/**********************************
+ * general aspect and positioning *
+ **********************************/
+/* inside the large card */
+#logo {
+  margin-top: 2.25em;
+  margin-bottom: 2.25em;
+}
+
+/* Form is positioned by itself. */
+
+#bar {
+  margin: 1.5em 0 1.7em 0;
+}
+
+#facebook {
+  justify-content: center;
+}
+
+#forgot-password {
+  margin-top: 1.8em;
+}
+
+/* separating cards and banner */
+#second-card {
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
+}
+
+/* footer */
+footer {
+  margin: 0 8%;
+
+  line-height: 1.8em;
+}
+
+footer > * {
+  display: flex;
+  flex-wrap: wrap;
+  /* "text-align: center;" will be ignored because we have a "display: flex;" which treats elements as
+   *  "containers", not as text. So we will use the flexbox property to center on the x-axis. */
+  justify-content: center;
+}
+
+footer article {
+  margin-top: 0.8em;
+}
+
+#github-icon {
+  position: relative;
+  bottom: 0.1em;
+}
+
+/* general ("top-level POV") */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  height: 100vh;
+
+  font-family: var(--ff-apple);
+
+  background-color: var(--clr-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 2em;
+}
+
+main > section {
+  /* We need to take a size other than "%" because the phone image has a fixed size. */
+  width: 22em;
+}
+
+/***************** 
+ * media queries *
+ *****************/
+@media (max-width: 875px) {
+  .phone {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    justify-content: start;
+  }
+  
+  .card {
+    border: none;
+    background: transparent;
+  }
+  
+  main > section {
+    width: 19em;
+  }
+}

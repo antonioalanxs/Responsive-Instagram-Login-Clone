@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <script script src="https://kit.fontawesome.com/c0e8330125.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/instagram.png" type="image/x-icon" />
+    
+    <title>Instagram</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="card card--large text-center">
+          <img src="img/instagram-logo.png" alt="Instagram logo." class="logo" id="logo" />
+          <form class="form">
+            <input
+            type="text"
+            placeholder="Phone number, username or email"
+            class="form__input form__input--soft fs-small"
+            />
+            <input
+            type="password"
+            placeholder="Password"
+            class="form__input form__input--soft fs-small"
+            />
+            <button class="form__submit form__submit--disabled form__submit--separated fs-large fw-medium">
+              Log In
+            </button>
+          </form>
+          <div class="bar fs-medium" id="bar">
+            <span class="bar__line bar__line--soft"></span>
+            <span class="bar__text fw-medium text-soft">Or</span>
+            <span class="bar__line bar__line--soft"></span>
+          </div>
+          <a href="/" class="facebook fs-large" id="facebook">
+            <img
+            src="img/facebook.png"
+            alt="Facebook logo."
+            class="facebook__icon"
+            />
+            <span class="facebook__text fw-medium">Log in with Facebook</span>
+          </a>
+          <div class="fs-small text-blue" id="forgot-password">
+            Forgot password?
+          </div>
+        </div>
+        
+        <div class="card card--medium text-center fs-large" id="second-card">
+          <span class="text-dark">Don't have an account?</span>
+          <a href="/" class="fw-medium text-light-blue">Sign up</a>
+        </div>
+        <div class="banner fs-large">
+          <div class="banner__text text-dark">Get the app.</div>
+          <div>
+            <img
+            src="img/app-store.png"
+            alt="Apple Store"
+            class="banner__img"
+            />
+            <img
+            src="img/google-play.png"
+            alt="Google Play"
+            class="banner__img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="phone">
+        <img src="img/phone-screen.png" alt="Instagram on a iPhone." class="phone__screen">
+      </section>
+    </main>
+    
+    <footer class="fs-small">
+      <nav>
+        <a href="/" class="text-gap text-soft">Meta</a>
+        <a href="/" class="text-gap text-soft">About</a>
+        <a href="/" class="text-gap text-soft">Blog</a>
+        <a href="/" class="text-gap text-soft">Jobs</a>
+        <a href="/" class="text-gap text-soft">Help</a>
+        <a href="/" class="text-gap text-soft">API</a>
+        <a href="/" class="text-gap text-soft">Privacy</a>
+        <a href="/" class="text-gap text-soft">Terms</a>
+        <a href="/" class="text-gap text-soft">Top Accounts</a>
+        <a href="/" class="text-gap text-soft">Hashtags</a>
+        <a href="/" class="text-gap text-soft">Locations</a>
+        <a href="/" class="text-gap text-soft">Instagram Lite</a>
+        <a href="/" class="text-gap text-soft">Contact Uploading & Non-Users</a>
+      </nav>
+      <nav>
+        <a href="/" class="text-gap text-soft">Dance</a>
+        <a href="/" class="text-gap text-soft">Food & Drink</a>
+        <a href="/" class="text-gap text-soft">Home & Garden</a>
+        <a href="/" class="text-gap text-soft">Music</a>
+        <a href="/" class="text-gap text-soft">Visual Arts</a>
+      </nav>
+      <article>
+        <span class="text-gap text-soft">English</span>
+        <span class="text-gap text-soft">© 2022 Instagram from Meta</span>
+        <i class="fa-brands fa-github-alt fa-2x text-gap logo" id="github-icon"></i>
+      </article>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
