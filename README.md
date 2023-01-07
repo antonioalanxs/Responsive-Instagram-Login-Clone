@@ -1,5 +1,7 @@
 # Instagram Login Clone
 
+This is one of my first contacts with web layout. A Responsive Instagram Login Clone made by using only HTML and CSS with the aim of learning about it.
+
 <a href="https://html.spec.whatwg.org/" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40" />
 </a>
@@ -12,10 +14,6 @@
 <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noreferrer">
   <img src="https://user-images.githubusercontent.com/79718376/211114700-5e3212cf-5b37-4ef9-82d9-6853f68624c6.png" alt="responsive-design" width="45" height="45" />
 </a>
-
-<br>
-
-This is one of my first contacts with web layout. A Responsive Instagram Login Clone made by using only HTML and CSS with the aim of learning about it.
 
 # Preview
 
