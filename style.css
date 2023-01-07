@@ -49,9 +49,9 @@ a:hover {
   text-decoration: none;
 }
 
-/****************** 
- * helper classes *
- ******************/
+/******************* 
+ * utility classes *
+ *******************/
 .text-center {
   text-align: center;
 }
@@ -95,11 +95,6 @@ a:hover {
 /**************
  * components *
  **************/
-/* logo */
-.logo {
-  cursor: pointer;
-}
-
  /* card */
 .card {
   border: 1px solid var(--clr-accent);
@@ -237,7 +232,7 @@ a:hover {
  * general aspect and positioning *
  **********************************/
 /* inside the large card */
-#logo {
+.logo img {
   margin-top: 2.25em;
   margin-bottom: 2.25em;
 }
@@ -265,6 +260,7 @@ a:hover {
 /* footer */
 footer {
   margin: 0 8%;
+  padding-bottom: 6.3em;
 
   line-height: 1.8em;
 }
@@ -281,11 +277,6 @@ footer article {
   margin-top: 0.8em;
 }
 
-#github-icon {
-  position: relative;
-  bottom: 0.1em;
-}
-
 /* general ("top-level POV") */
 body {
   display: flex;
@@ -293,7 +284,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 4em;
-  height: 100vh;
+  min-height: 120vh;
 
   font-family: var(--ff-apple);
 
