@@ -18,7 +18,8 @@ This is one of my first contacts with web layout. A Responsive Instagram Login C
 # Preview
 
 ![Desktop-2022 09 01-17 15 41 03](https://user-images.githubusercontent.com/79718376/187952081-25796940-9510-49d5-bb48-e4b6887535b7.gif)
-> https://antonioalanxs.github.io/Responsive-Instagram-Login-Clone/
+
+> https://antonioalanxs.github.io/Instagram-Login-Clone/
 
 # What have I learned?
 
